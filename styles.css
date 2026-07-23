@@ -156,12 +156,28 @@ html {
     color: var(--brown);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid var(--brown);
 }
 
 .contact-info a:hover {
-    color: var(--dark-brown);
-    text-decoration: underline;
+    background-color: var(--brown);
+    color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(87, 51, 16, 0.2);
+}
+
+.location-link {
+    display: inline-flex !important;
+}
+
+.location-link i {
+    font-size: 1rem;
 }
 
 .about-image img {
@@ -621,6 +637,11 @@ html {
     .owner-highlights {
         flex-direction: column;
     }
+
+    .location-link {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -667,6 +688,15 @@ html {
     }
 
     .highlight-item span {
+        font-size: 0.85rem;
+    }
+
+    .contact-info a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .location-link i {
         font-size: 0.85rem;
     }
 }
