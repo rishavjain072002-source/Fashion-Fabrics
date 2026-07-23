@@ -175,10 +175,90 @@ html {
     transform: scale(1.05);
 }
 
+/* Meet The Owner Section */
+.owner {
+    padding: 4rem 2rem;
+    background-color: var(--light-cream);
+}
+
+.owner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.owner-text h2 {
+    font-size: 2.5rem;
+    color: var(--brown);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.owner-text h3 {
+    font-size: 2rem;
+    color: var(--brown);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.owner-text p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+#owner-description-2 {
+    margin-bottom: 2rem;
+}
+
+.owner-highlights {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--brown);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-item i {
+    font-size: 1.5rem;
+    color: var(--brown);
+}
+
+.highlight-item span {
+    color: var(--brown);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.owner-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.owner-image img:hover {
+    transform: scale(1.05);
+}
+
 /* Gallery Section */
 .gallery {
     padding: 4rem 2rem;
-    background-color: var(--light-cream);
+    background-color: #fff;
 }
 
 .gallery h2 {
@@ -256,7 +336,7 @@ html {
 /* Testimonials Section */
 .testimonials {
     padding: 4rem 2rem;
-    background-color: #fff;
+    background-color: var(--light-cream);
 }
 
 .testimonials h2 {
@@ -276,7 +356,7 @@ html {
 }
 
 .testimonial-card {
-    background: linear-gradient(135deg, var(--cream) 0%, var(--light-cream) 100%);
+    background: linear-gradient(135deg, var(--cream) 0%, #fff 100%);
     padding: 2rem;
     border-radius: 8px;
     border-left: 4px solid var(--brown);
@@ -311,7 +391,7 @@ html {
 /* Appointments Section */
 .appointments {
     padding: 4rem 2rem;
-    background-color: var(--light-cream);
+    background-color: #fff;
 }
 
 .appointments h2 {
@@ -332,7 +412,7 @@ html {
 .appointment-form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--light-cream);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -361,6 +441,7 @@ html {
     font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.3s ease;
+    background-color: #fff;
 }
 
 .form-group input:focus,
@@ -403,7 +484,7 @@ html {
 /* Contact Section */
 .contact {
     padding: 4rem 2rem;
-    background-color: #fff;
+    background-color: var(--light-cream);
 }
 
 .contact h2 {
@@ -425,10 +506,11 @@ html {
 .contact-item {
     text-align: center;
     padding: 2rem;
-    background-color: var(--light-cream);
+    background-color: #fff;
     border-radius: 8px;
     border-top: 4px solid var(--brown);
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .contact-item:hover {
@@ -494,7 +576,7 @@ html {
     }
 
     .nav-link {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
     .hero-content h1 {
@@ -505,12 +587,18 @@ html {
         font-size: 1.2rem;
     }
 
-    .about-container {
+    .about-container,
+    .owner-container {
         grid-template-columns: 1fr;
     }
 
-    .about-text h2 {
+    .about-text h2,
+    .owner-text h2 {
         font-size: 2rem;
+    }
+
+    .owner-text h3 {
+        font-size: 1.5rem;
     }
 
     .gallery-container {
@@ -529,6 +617,10 @@ html {
     .testimonials-container {
         grid-template-columns: 1fr;
     }
+
+    .owner-highlights {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -544,12 +636,18 @@ html {
         font-size: 1rem;
     }
 
-    .about {
+    .about,
+    .owner {
         padding: 2rem 1rem;
     }
 
-    .about-text h2 {
+    .about-text h2,
+    .owner-text h2 {
         font-size: 1.7rem;
+    }
+
+    .owner-text h3 {
+        font-size: 1.3rem;
     }
 
     .nav-menu {
@@ -557,6 +655,18 @@ html {
     }
 
     .nav-link {
+        font-size: 0.75rem;
+    }
+
+    .highlight-item {
+        padding: 0.75rem 1rem;
+    }
+
+    .highlight-item i {
+        font-size: 1.2rem;
+    }
+
+    .highlight-item span {
         font-size: 0.85rem;
     }
 }
